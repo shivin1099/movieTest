@@ -29,15 +29,12 @@ const Navbar = () => {
 
   useEffect(() => {
     console.log("navbar mounted");
-    
   }, []);
 
   return (
     <>
       <header
-        className={`align-center flex flex-col md:h-[70px] md:flex-row ${
-          isTransparentNav ? 'bg-transparent' : 'bg-h-blue'
-        } ${
+        className={`align-center flex flex-col md:h-[70px] md:flex-row  ${
           DDMobOpen && !isLoggedIn ? 'mb-28' : searchMobOpen ? 'mb-11' : 'mb-0'
         }
         ${
@@ -54,14 +51,8 @@ const Navbar = () => {
               alt="letterboxd mobile logo"
             />
           </Link>
-          <Link className="hidden self-center md:block" to="/">
-            <img
-              src={logo}
-              width={265}
-              max-height={25}
-              className="hidden md:block"
-              alt="letterboxd browser logo"
-            />
+          <Link className="hidden self-center md:block " to="/">
+            <h6 className="text-white text-[50px]">Logo</h6>
           </Link>
           <div className="flex items-center">
             <nav className="z-[1000] mt-4 flex flex-col self-start">
@@ -83,33 +74,57 @@ const Navbar = () => {
                 ) : showLogin ? (
                   <SignInAll />
                 ) : (
-                  <li
-                    className="ml-4 items-center  self-center pt-2"
-                    onClick={() => setShowLogin(true)}
-                  >
-                    <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey	hover:cursor-pointer hover:text-p-white">
-                      {' '}
-                      SIGN IN
-                    </p>
-                  </li>
+                  <>
+                    <li className="ml-4 items-center self-center pt-2">
+                      <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                        SIGN IN
+                      </p>
+                    </li>
+                    <li className="ml-4 items-center self-center pt-2">
+                      <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                        CREATE ACCOUNT
+                      </p>
+                    </li>
+                  </>
                 )}
-                {/* ...existing code... */}
+                <li className="ml-4 items-center self-center pt-2">
+                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                    FILMS
+                  </p>
+                </li>
+                <li className="ml-4 items-center self-center pt-2">
+                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                    LISTS
+                  </p>
+                </li>
+                <li className="ml-4 items-center self-center pt-2">
+                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                    MEMBERS
+                  </p>
+                </li>
+                <li className="ml-4 items-center self-center pt-2">
+                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                    JOURNAL
+                  </p>
+                </li>
               </ul>
             </nav>
-            <img
-              className="search-icon-desktop hidden hover:cursor-pointer md:ml-4 md:block"
-              src={searchIcon}
-              width={30}
-              height={30}
-              alt="search icon"
-              onClick={displaySearchDesktop}
-            />
-            <div className="search-bar-desktop hidden md:hidden">
-              
+            <div className="ml-[16px] search-bar-desktop hidden md:flex items-center bg-white border border-gray-300 rounded-[10px] p-2 h-[35px] w-[20%]" style={{backgroundColor:'hsla(0, 0%, 100%, .25)'}}>
+              <input
+                type="text"
+                className="flex-grow p-2 w-full"
+                placeholder="Search..."
+              />
+              <img
+                src={searchIcon}
+                width={20}
+                height={20}
+                alt="search icon"
+                className="ml-2"
+              />
             </div>
             <div ref={dropDownRef}>
               <img
-                onClick={() => setDDMobOpen(!DDMobOpen)}
                 className="md:hidden"
                 src={openCloseMenu}
                 width={40}
@@ -124,9 +139,6 @@ const Navbar = () => {
                 width={40}
                 height={40}
                 alt="search icon"
-                onClick={() => {
-                  setSearchMobOpen(!searchMobOpen);
-                }}
               />
             </div>
           </div>
