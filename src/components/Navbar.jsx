@@ -29,6 +29,10 @@ const Navbar = () => {
 
   useEffect(() => {
     console.log("navbar mounted");
+    const navItems = document.querySelectorAll('nav ul li p');
+    navItems.forEach(item => {
+      item.classList.add('hover:text-p-white');
+    });
   }, []);
 
   return (
@@ -76,34 +80,34 @@ const Navbar = () => {
                 ) : (
                   <>
                     <li className="ml-4 items-center self-center pt-2">
-                      <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                      <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-white">
                         SIGN IN
                       </p>
                     </li>
                     <li className="ml-4 items-center self-center pt-2">
-                      <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                      <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-white">
                         CREATE ACCOUNT
                       </p>
                     </li>
                   </>
                 )}
                 <li className="ml-4 items-center self-center pt-2">
-                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-white">
                     FILMS
                   </p>
                 </li>
                 <li className="ml-4 items-center self-center pt-2">
-                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-white">
                     LISTS
                   </p>
                 </li>
                 <li className="ml-4 items-center self-center pt-2">
-                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-white">
                     MEMBERS
                   </p>
                 </li>
                 <li className="ml-4 items-center self-center pt-2">
-                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-p-white">
+                  <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-white">
                     JOURNAL
                   </p>
                 </li>
@@ -147,5 +151,10 @@ const Navbar = () => {
     </>
   );
 };
+
+const navItems = document.querySelectorAll('nav ul li p');
+navItems.forEach(item => {
+  item.classList.add('hover:text-p-white');
+});
 
 export default Navbar;
