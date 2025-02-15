@@ -84,11 +84,6 @@ const Navbar = () => {
                         SIGN IN
                       </p>
                     </li>
-                    <li className="ml-4 items-center self-center pt-2">
-                      <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-white">
-                        CREATE ACCOUNT
-                      </p>
-                    </li>
                   </>
                 )}
                 <li className="ml-4 items-center self-center pt-2">
@@ -98,17 +93,17 @@ const Navbar = () => {
                 </li>
                 <li className="ml-4 items-center self-center pt-2">
                   <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-white">
-                    LISTS
+                    TV SHOWS
                   </p>
                 </li>
                 <li className="ml-4 items-center self-center pt-2">
                   <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-white">
-                    MEMBERS
+                    REVIEWS
                   </p>
                 </li>
                 <li className="ml-4 items-center self-center pt-2">
                   <p className="sans-serif ml-4 text-xs font-bold uppercase tracking-widest text-sh-grey hover:cursor-pointer hover:text-white">
-                    JOURNAL
+                    WHAT TO WATCH
                   </p>
                 </li>
               </ul>
